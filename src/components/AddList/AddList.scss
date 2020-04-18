@@ -1,0 +1,53 @@
+.add-list {
+    position: relative;
+
+    &__popup {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 230px;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+
+        .button {
+            width: 100%;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+
+        &-close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            cursor:pointer;
+        }
+    }
+
+    &__circle-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        li {
+            height: 20px;
+            width: 20px;
+        }
+
+        .badge {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0 1px 3px rgba(0,0,0,0.15);
+            }
+            &.active {
+                border: 2px solid #525252;
+            }
+        }
+    }
+}

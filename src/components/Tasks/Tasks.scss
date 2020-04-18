@@ -1,0 +1,194 @@
+.tasks {
+    &:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        color: #64c4ed;
+        font-size: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f2f2f2;
+
+        &:hover {
+            img {
+                opacity: 0.2;
+            }
+        }
+
+        img {
+            margin-left: 15px;
+            opacity: 0;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__items {
+        padding: 30px 0;
+
+        &-no-tasks {
+            color: #c9d1d3;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &:hover &-actions {
+                opacity: 1;
+            }
+
+            &-actions {
+                display: flex;
+                opacity: 0;
+                transition: opacity 0.15s ease-in-out;
+    
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32px;
+                    height: 32px;
+                    background-color: lighten(#f4f6f8, 2%);
+                    border-radius: 6px;
+                    margin-left: 5px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        background-color: darken(#f4f6f8, 2%);
+                        svg {
+                        opacity: 0.9;
+                        }
+                    }
+    
+                    svg {
+                        width: 11px;
+                        height: 11px;
+                        opacity: 0.4;
+                    }
+                }
+            }
+
+            .checkbox {
+                label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid #e8e8e8;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #f2f2f2;
+                        border-color: #f2f2f2;
+                        svg {
+                            opacity: 1;
+                            path {
+                                stroke: #b2b2b2;
+                            }
+                        }
+                    }
+
+                    svg {
+                        opacity: 0;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+
+                input {
+                    display: none;
+                }
+
+                input:checked + label {
+                    background: #4dd599;
+                    border-color: #4dd599;
+                    svg {
+                        opacity: 1;
+                        path {
+                            stroke: #fff;
+                        }
+                    }
+                }
+            }
+
+            .caption {
+                flex: 1;
+                margin-left: 15px;
+                border: none;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    &__form {
+
+        &-new {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                opacity: 0.2;
+                transition: all .4s ease;
+            }
+
+            span {
+                color: #b7b7b7;
+                font-size: 16px;
+                transition: all .4s ease;
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.7;
+                }
+
+                span {
+                    color: #1f1f1f;
+                }
+            }
+        }
+
+        &-block {
+            .button {
+                width: 150px;
+                margin-right: 10px;
+                margin-top: 15px;
+
+                &--grey {
+                    width: 80px;
+                    background: #f4f6f8;
+                    border: 1px solid #f4f6f8;
+                    color: #9c9c9c;
+
+                    &:hover {
+                        background: darken(#f4f6f8, 5%);
+                        color: #1f1f1f;
+                    }
+
+                    &:active {
+                        background: darken(#f4f6f8, 10%);
+                        color: #1f1f1f;
+                    }
+
+                }
+            }
+        }
+    }
+}
